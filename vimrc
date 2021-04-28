@@ -46,6 +46,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Remember and jump to last edit position
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " VIM WITHOUT PLUGINS "
 
 " FINDING FILES:
