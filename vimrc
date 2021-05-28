@@ -32,7 +32,7 @@ set cursorline
 map <F5> :setlocal spell! spelllang=en_us<CR>
 
 " Enable system wide clipboard
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 
 " Color
 set background=dark
