@@ -40,6 +40,9 @@ set background=dark
 " Show line number
 set number relativenumber
 
+" Set scroll offset
+set scrolloff=5
+
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
 map <C-j> <C-w>j
