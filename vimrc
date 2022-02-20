@@ -3,11 +3,9 @@
 set nocompatible
 
 " Encoding
-set termencoding=utf-8
 set encoding=utf-8
 
 " File format
-set fileformat=unix
 filetype indent on
 set autoindent
 
@@ -15,18 +13,14 @@ set autoindent
 set showcmd
 
 " Indentation
-set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
 
 " Highlighting
-set showmatch
 set incsearch
-set hlsearch
 filetype plugin on
 syntax enable
-set cursorline
 
 " Spell check, F5 key to toggle
 map <F5> :setlocal spell! spelllang=en_us<CR>
