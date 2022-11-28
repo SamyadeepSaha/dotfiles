@@ -6,11 +6,13 @@
 [[ $- != *i* ]] && return
 
 # Variable
-export TERMINAL=alacritty
 export EDITOR=vim
+
+# Path
+export PATH="$HOME/.local/bin/:$PATH"
 
 # Alias
 alias ls='ls --color=auto'
 
 # Prompt
-PS1="\[\033[01;96m\]\W\[\033[92m\]\$ \[\033[00m\]"
+export PS1="\[\033[01;92m\][\[\033[01;34m\]\w\[\033[01;92m\]] \[\033[96m\] \nYes, Master! \[\033[00m\]"
