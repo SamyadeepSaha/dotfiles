@@ -1,3 +1,2 @@
-# dotfiles
+# My linux config files
 Nothing to see here. :-)
-Made this repo private.
