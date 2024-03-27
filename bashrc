@@ -8,11 +8,32 @@
 # Variable
 export EDITOR=vim
 
-# Path
-export PATH="$HOME/.local/bin/:$PATH"
+# Input different language
+#export GTK_IM_MODULE=ibus
+#export QT_IM_MODULE=ibus
+#export XMODIFIERS=@im=ibus
 
 # Alias
+alias up='sudo pacman -Syyu --noconfirm'
 alias ls='ls --color=auto'
+alias ll='ls -l --human-readable --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color'
+
+# Shortcuts
+alias dl='cd $HOME/Downloads/'
+alias sl='cd $HOME/repos/suckless/'
+alias misc='cd $HOME/repos/miscellaneous/'
+# alias ep='cd $HOME/Downloads/epapers/'
+alias mls='cd $HOME/.local/my-linux-setup/'
+
+# Enable vi mode to edit command
+set -o vi
 
 # Prompt
-export PS1="\[\033[01;92m\][\[\033[01;34m\]\w\[\033[01;92m\]] \[\033[96m\] \nYes, Master! \[\033[00m\]"
+if [ -z "$DISPLAY" ]
+then
+    export PS1="[\[\033[01;35m\]\W\[\033[00m\]] "
+else
+    eval "$(starship init bash)"
+fi
