@@ -13,6 +13,13 @@ export EDITOR=vim
 #export QT_IM_MODULE=ibus
 #export XMODIFIERS=@im=ibus
 
+# Dictionary function
+function meaning() {
+	sdcv -n --utf8-output --color "$@" 2>&1 | \
+	fold --width=$(tput cols) | \
+	less --quit-if-one-screen -RX
+}
+
 # Alias
 alias up='sudo pacman -Syyu --noconfirm'
 alias ls='ls --color=auto'
