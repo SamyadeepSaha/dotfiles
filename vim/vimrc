@@ -106,11 +106,27 @@ map <C-l> <C-w>l
 " Show margin at column 80
 set colorcolumn=80
 
-" Spell check, F5 key to toggle
-map <F5> :setlocal spell! spelllang=en_us<CR>
+" Compile keybind
+nnoremap <F5> :make<CR>
 
 " Netrw (file manager)
-map <F6> :Explore<CR>
+nnoremap <F6> :Explore<CR>
+
+" Spell check, F5 key to toggle
+nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 
 " Remember and jump to last edit position
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" LaTeX specific settings
+" Insert LaTeX boilerplate for new .tex files
+autocmd BufNewFile *.tex 0r ~/.vim/templates/latex.tex
+" Use latexmk for LaTeX files
+autocmd FileType tex setlocal makeprg=latexmk\ -pdf\ %
+
+" Insert HTML boilerplate for new .html files
+"autocmd BufNewFile *.html 0r ~/.vim/templates/html.html
+
+" Insert shell script boilerplate for new .sh files
+"autocmd BufNewFile *.sh 0r ~/.vim/templates/shell.sh
+
